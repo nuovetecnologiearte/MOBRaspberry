@@ -4,7 +4,7 @@ import ddf.minim.*;
 Minim minim;
 AudioInput in;
 
-color white;
+//color white;
 PImage img1;
 PImage img2;
 PImage img3;
@@ -13,24 +13,25 @@ PImage img4;
 float value;
 void setup()
 {
-  size(1440, 900, P2D);
-  white = color(255);
-  colorMode(HSB,100);
+  size(1440, 900);
+  //white = color(255);
+  //colorMode(HSB,100);
   minim = new Minim(this);
   minim.debugOn();
   
   in = minim.getLineIn(Minim.MONO, 512, 48000.0f, 16);
   
-  background(0);
+  
   img1 = loadImage("1.png");
   img2 = loadImage("2.png");
   img3 = loadImage("3.png");
   img4 = loadImage("4.png");
+
 }
 
 void draw()
 {
-  background(0);
+  background(img2);
   value = (abs((in.left.get(5)*50)));
 println(value);
 
