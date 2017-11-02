@@ -39,6 +39,7 @@ color white;
 PImage img1;
 PImage img2;
 PImage img3;
+PImage img4;
 
 float value;
 void setup()
@@ -53,9 +54,10 @@ void setup()
   in = minim.getLineIn(Minim.STEREO, 512);
   
   background(0);
-  img1 = loadImage("1.jpg");
-  img2= loadImage("2.jpg");
-  img3 = loadImage("3.jpg");
+  img1 = loadImage("1.png");
+  img2 = loadImage("2.png");
+  img3 = loadImage("3.png");
+  img4 = loadImage("4.png");
 }
 
 void draw()
@@ -68,9 +70,9 @@ println(value);
 
 if (value > 0 && value <2) {
 image(img1, 0,0);
-} else if (value >= 2 && value < 10) {
+} else if (value >= 2 && value < 6) {
   image(img2, 0, 0);
-} else if (value >= 10) {
+} else if (value >= 6) {
   image(img3, 0,0);
 }
   // draw the waveforms
