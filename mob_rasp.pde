@@ -35,6 +35,7 @@ import ddf.minim.*;
 
 Minim minim;
 AudioInput in;
+
 color white;
 PImage img1;
 PImage img2;
@@ -51,7 +52,7 @@ void setup()
   minim.debugOn();
   
   // get a line in from Minim, default bit depth is 16
-  in = minim.getLineIn(Minim.STEREO, 512);
+  in = minim.getLineIn(Minim.MONO, 512, 48000.0f, 16);
   
   background(0);
   img1 = loadImage("1.png");
@@ -63,7 +64,7 @@ void setup()
 void draw()
 {
   background(0);
-  value = (abs((in.left.get(511)*50)));
+  value = (abs((in.left.get(5)*50)));
 println(value);
 
 
