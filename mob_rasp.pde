@@ -13,7 +13,8 @@ PImage img4;
 float value;
 void setup()
 {
-  size(1440, 900);
+  //size(1440, 900);
+  fullScreen();
   //white = color(255);
   //colorMode(HSB,100);
   minim = new Minim(this);
@@ -26,7 +27,10 @@ void setup()
   img2 = loadImage("2.png");
   img3 = loadImage("3.png");
   img4 = loadImage("4.png");
-
+  img1.resize(width, height);
+  img2.resize(width, height);
+  img3.resize(width, height);
+img4.resize(width, height);
 }
 
 void draw()
